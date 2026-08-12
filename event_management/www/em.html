@@ -1,0 +1,10 @@
+{% extends "templates/web.html" %}
+
+{% block title %}Event Management{% endblock %}
+
+{% block page_content %}
+<div id="app"></div>
+<script>window.csrf_token = "{{ csrf_token }}";</script>
+<script type="module" src="/assets/event_management/frontend/assets/index.js"></script>
+<link rel="stylesheet" href="/assets/event_management/frontend/assets/index.css" />
+{% endblock %}

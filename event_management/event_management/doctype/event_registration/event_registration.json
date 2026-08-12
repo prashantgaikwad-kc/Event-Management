@@ -1,0 +1,380 @@
+{
+ "actions": [],
+ "autoname": "format:REG-{#####}",
+ "creation": "2026-07-31 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "event",
+  "registration_reference",
+  "status",
+  "column_break_1",
+  "ticket_type",
+  "registration_time",
+  "attendee_section",
+  "attendee_user",
+  "attendee_name",
+  "column_break_attendee",
+  "attendee_email",
+  "attendee_phone",
+  "pricing_section",
+  "ticket_price",
+  "addon_total",
+  "subtotal",
+  "column_break_pricing",
+  "discount_amount",
+  "tax_amount",
+  "grand_total",
+  "addons_section",
+  "items",
+  "payment_section",
+  "payment_status",
+  "payment_gateway",
+  "payment_reference",
+  "column_break_payment",
+  "payment_transaction_id",
+  "paid_at",
+  "cancelled_at",
+  "ticket_section",
+  "qr_token_hash",
+  "qr_token_encrypted",
+  "qr_token_version",
+  "qr_token_issued_at",
+  "column_break_ticket",
+  "qr_token_expires_at",
+  "ticket_pdf_url",
+  "checkin_section",
+  "checked_in",
+  "checked_in_at",
+  "column_break_checkin",
+  "checked_in_by",
+  "checkin_count"
+ ],
+ "fields": [
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Event",
+   "options": "EM Event",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "registration_reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Registration Reference",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "default": "Pending Payment",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Pending Payment\nConfirmed\nCancelled\nExpired\nRefunded",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ticket_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Ticket Type",
+   "options": "Event Ticket Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_time",
+   "fieldtype": "Datetime",
+   "label": "Registration Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendee_section",
+   "fieldtype": "Section Break",
+   "label": "Attendee"
+  },
+  {
+   "fieldname": "attendee_user",
+   "fieldtype": "Link",
+   "label": "Attendee User",
+   "options": "User",
+   "search_index": 1
+  },
+  {
+   "fieldname": "attendee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Attendee Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_attendee",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attendee_email",
+   "fieldtype": "Data",
+   "label": "Attendee Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendee_phone",
+   "fieldtype": "Data",
+   "label": "Attendee Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "ticket_price",
+   "fieldtype": "Currency",
+   "label": "Ticket Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "addon_total",
+   "fieldtype": "Currency",
+   "label": "Addon Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "subtotal",
+   "fieldtype": "Currency",
+   "label": "Subtotal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pricing",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "addons_section",
+   "fieldtype": "Section Break",
+   "label": "Add-ons"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Event Registration Item"
+  },
+  {
+   "fieldname": "payment_section",
+   "fieldtype": "Section Break",
+   "label": "Payment"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Payment Status",
+   "options": "Not Required\nPending\nPaid\nFailed\nRefunded"
+  },
+  {
+   "fieldname": "payment_gateway",
+   "fieldtype": "Data",
+   "label": "Payment Gateway"
+  },
+  {
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference"
+  },
+  {
+   "fieldname": "column_break_payment",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_transaction_id",
+   "fieldtype": "Data",
+   "label": "Payment Transaction Id"
+  },
+  {
+   "fieldname": "paid_at",
+   "fieldtype": "Datetime",
+   "label": "Paid At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cancelled_at",
+   "fieldtype": "Datetime",
+   "label": "Cancelled At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ticket_section",
+   "fieldtype": "Section Break",
+   "label": "QR Ticket"
+  },
+  {
+   "fieldname": "qr_token_hash",
+   "fieldtype": "Data",
+   "label": "QR Token Hash",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "qr_token_encrypted",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "QR Token Encrypted",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qr_token_version",
+   "fieldtype": "Int",
+   "label": "QR Token Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qr_token_issued_at",
+   "fieldtype": "Datetime",
+   "label": "QR Token Issued At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ticket",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qr_token_expires_at",
+   "fieldtype": "Datetime",
+   "label": "QR Token Expires At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ticket_pdf_url",
+   "fieldtype": "Data",
+   "label": "Ticket PDF URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "checkin_section",
+   "fieldtype": "Section Break",
+   "label": "Check-in"
+  },
+  {
+   "default": "0",
+   "fieldname": "checked_in",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Checked In",
+   "read_only": 1
+  },
+  {
+   "fieldname": "checked_in_at",
+   "fieldtype": "Datetime",
+   "label": "Checked In At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_checkin",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "checked_in_by",
+   "fieldtype": "Link",
+   "label": "Checked In By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "checkin_count",
+   "fieldtype": "Int",
+   "label": "Checkin Count",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Event Checkin",
+   "link_fieldname": "registration"
+  },
+  {
+   "link_doctype": "Payment Reference",
+   "link_fieldname": "registration"
+  }
+ ],
+ "modified": "2026-07-31 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Event Management",
+ "name": "Event Registration",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Event Organizer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Event Gate Staff"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Event Attendee",
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "attendee_name",
+ "track_changes": 1
+}

@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "creation": "2026-07-31 18:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "addon",
+  "addon_code",
+  "qty",
+  "unit_price",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "addon",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Add-on",
+   "options": "Event Addon",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "addon.code",
+   "fieldname": "addon_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Addon Code",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Unit Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-07-31 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Event Management",
+ "name": "Event Registration Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

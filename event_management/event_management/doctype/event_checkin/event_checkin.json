@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2026-07-31 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "registration",
+  "event",
+  "result",
+  "source",
+  "column_break_1",
+  "attendee_name",
+  "attendee_email",
+  "checked_in_at",
+  "checked_in_by",
+  "scanned_token_hash",
+  "device_info",
+  "ip_address",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "registration",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Registration",
+   "options": "Event Registration",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Event",
+   "options": "EM Event",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Result",
+   "options": "Success\nAlready Checked In\nInvalid\nCancelled\nUnpaid\nNot Eligible\nError",
+   "reqd": 1
+  },
+  {
+   "default": "QR",
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "QR\nManual"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attendee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Attendee Name"
+  },
+  {
+   "fieldname": "attendee_email",
+   "fieldtype": "Data",
+   "label": "Attendee Email"
+  },
+  {
+   "fieldname": "checked_in_at",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Checked In At"
+  },
+  {
+   "fieldname": "checked_in_by",
+   "fieldtype": "Link",
+   "label": "Checked In By",
+   "options": "User"
+  },
+  {
+   "fieldname": "scanned_token_hash",
+   "fieldtype": "Data",
+   "label": "Scanned Token Hash"
+  },
+  {
+   "fieldname": "device_info",
+   "fieldtype": "Small Text",
+   "label": "Device Info"
+  },
+  {
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "label": "IP Address"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-31 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Event Management",
+ "name": "Event Checkin",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Event Organizer",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Event Gate Staff"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
